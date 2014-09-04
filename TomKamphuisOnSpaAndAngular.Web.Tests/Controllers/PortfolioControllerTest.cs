@@ -23,7 +23,7 @@ namespace TomKamphuisOnSpaAndAngular.Web.Tests.Controllers
             PortfolioController controller = new PortfolioController(repo);
 
             // Act
-            ViewResult result = controller.Index() as ViewResult;
+            ViewResult result = controller.Index(string.Empty) as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);
