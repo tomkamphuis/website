@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tom Kamphuis | Software engineer & Webdeveloper</title>
+        <meta name="description" content="Tom Kamphuis, software engineer, webdeveloper and passionate about his job">
+        <meta name="keywords" content="Tom Kamphuis,Software engineer,Webdeveloper,ASP.NET,ASP.NET MVC,Webforms,C#,TDD,BDD">
+        <meta name="author" content="Tom Kamphuis">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        @Styles.Render("~/Content/CSS")
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic" />
+        <!--[if IEMobile]>
+            @Styles.Render("~/Content/IEMobile")
+        <![endif]-->
+
+        <script type="text/javascript" src="~/Static/JS/jquery.min.js"></script>
+        @Scripts.Render("~/Bundles/JQueryComponents")
+        @Scripts.Render("~/Bundles/Bootstrap")
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        @RenderBody()
+        @Html.Partial("_GoogleAnalytics")
+    </body>
+</html>
