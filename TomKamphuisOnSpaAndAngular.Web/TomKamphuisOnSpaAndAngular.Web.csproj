@@ -204,6 +204,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Static\JS\angular-mocks.js" />
+    <Content Include="Static\JS\angular.js" />
+    <Content Include="Static\JS\angular.min.js" />
     <Content Include="Static\CSS\iemobile.css" />
     <Content Include="Static\CSS\prettyPhoto.css" />
     <Content Include="Static\CSS\reset.css" />
@@ -323,6 +326,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_GoogleAnalytics.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Static\JS\angular.min.js.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
