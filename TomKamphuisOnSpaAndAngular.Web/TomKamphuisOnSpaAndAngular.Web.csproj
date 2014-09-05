@@ -235,6 +235,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Static\JS\Angular\angular-sanitize.js" />
     <Content Include="Static\JS\Angular\angular-sanitize.min.js" />
