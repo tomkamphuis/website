@@ -7,8 +7,8 @@
             $scope.title = "Loading...";
 
             $http.get("/api/slide/" + slideTitle).success(function (data, status, headers, config) {
-                $scope.title = data.title;
-                $scope.content = data.content;
+                $scope.title = data.pageTitle;
+                $scope.content = data.slideContent;
             }).error(function (data, status, headers, config) {
                 $scope.title = "Oops... something went wrong";
                 $scope.working = false;

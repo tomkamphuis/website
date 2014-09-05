@@ -1,0 +1,31 @@
+﻿<section id="contact">
+    <div id="map"></div>
+    <div class="contact-info">
+        <h3 class="main-heading"><span>Contact info</span></h3>
+        <ul>
+            <li>Kerkstraat 22, 7641BT Wierden, The Netherlands<br /><br /></li>
+            <li>Email: tom@tomkamphuis.nl</li>
+            <li>Phone: on request</li>
+            <li>Website: www.tomkamphuis.nl</li>
+        </ul>
+    </div>
+    <div class="contact-form">
+        <h3 class="main-heading"><span>Let's keep in touch</span></h3>
+        <div id="contact-status"></div>
+        <form action="" id="contactform">
+            <p>
+                Html.LabelFor(m => m.Name)
+                Html.TextBoxFor(m => m.Name, new { @@class = "input" })
+            </p>
+            <p>
+                Html.LabelFor(m => m.Email)
+                Html.TextBoxFor(m => m.Email, new { @@class = "input" })
+            </p>
+            <p>
+                Html.LabelFor(m => m.Message)
+                Html.TextAreaFor(m => m.Message, new { cols = "88", rows = "6", @@class = "textarea" })
+            </p>
+            <input type="submit" name="submit" value="Send your message" class="button transition" onclick="sendAnalyticsData('Send contact form')">
+        </form>
+    </div>
+</section>
