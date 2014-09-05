@@ -8,47 +8,54 @@ namespace TomKamphuisOnSpaAndAngular.Repositories.AbstractRepositories
 {
     public class SlideRepository : ISlideRepository
     {
-        private IList<SlideModel> _models;
+        private SlideModel _model;
 
         public SlideRepository()
         {
-            if(_models == null)
+            if(_model == null)
             {
-                _models = new List<SlideModel>();
+                _model.Slides = new List<Slide>();
 
-                _models.Add(new SlideModel
+                _model.Slides.Add(new Slide
                 {
-                    PageTitle = "Slide1",
-                    MenuTitle = "Slide1",
-                    SlideContent = "<p>Dit is een test!</p>"
+                    PageTitle = "Profile",
+                    MenuPicto = "&#x43;",
+                    SlideContent = "/Views/Portfolio/ProfilePartial.html"
                 });
 
-                _models.Add(new SlideModel
+                _model.Slides.Add(new Slide
                 {
-                    PageTitle = "Slide2",
-                    MenuTitle = "Slide2",
-                    SlideContent = "<p>Dit is een tweede test!</p>"
+                    PageTitle = "Resume",
+                    MenuPicto = "&#x3a;",
+                    SlideContent = "/Views/Portfolio/ResumePartial.html"
                 });
 
-                _models.Add(new SlideModel
+                _model.Slides.Add(new Slide
                 {
-                    PageTitle = "Slide3",
-                    MenuTitle = "Slide3",
-                    SlideContent = "<p>Dit is een derde test!</p>"
+                    PageTitle = "Portfolio",
+                    MenuPicto = "&#x38;",
+                    SlideContent = "/Views/Portfolio/PortfolioPartial.html"
                 });
 
-                _models.Add(new SlideModel
+                _model.Slides.Add(new Slide
                 {
-                    PageTitle = "Slide4",
-                    MenuTitle = "Slide4",
-                    SlideContent = "<p>Dit is een vierde test!</p>"
+                    PageTitle = "Contact",
+                    MenuPicto = "&#x21;",
+                    SlideContent = "/Views/Portfolio/ContactPartial.html"
                 });
             }
         }
 
         public async Task<SlideModel> GetSlideByPageTitleAsync(string title)
         {
-            return await Task.Run(() => _models.FirstOrDefault(s => s.PageTitle.ToLower() == title.ToLower()));
+            return await Task.Run(() => this.GetSlideModelWithCurrentSlide(title));
+        }
+
+        private SlideModel GetSlideModelWithCurrentSlide(string title)
+        {
+            _model.CurrentSlide = _model.Slides.FirstOrDefault(s => s.PageTitle.ToLower() == title.ToLower());
+
+            return _model;
         }
     }
 }

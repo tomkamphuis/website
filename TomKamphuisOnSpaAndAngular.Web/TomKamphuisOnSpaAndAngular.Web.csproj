@@ -364,19 +364,19 @@
     <Content Include="Static\JS\angular.min.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Portfolio\_ProfilePartial.cshtml" />
+    <Content Include="Views\Portfolio\_ProfilePartial.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_HeaderPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Portfolio\_ResumePartial.cshtml" />
+    <Content Include="Views\Portfolio\_ResumePartial.html" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Portfolio\_PortfolioPartial.cshtml" />
+    <Content Include="Views\Portfolio\_PortfolioPartial.html" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Portfolio\_ContactPartial.cshtml" />
+    <Content Include="Views\Portfolio\_ContactPartial.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_FooterPartial.cshtml" />

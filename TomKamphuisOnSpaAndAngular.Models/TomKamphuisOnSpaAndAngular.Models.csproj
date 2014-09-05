@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Slides\ProjectModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Slides\Slide.cs" />
     <Compile Include="Slides\SlideModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

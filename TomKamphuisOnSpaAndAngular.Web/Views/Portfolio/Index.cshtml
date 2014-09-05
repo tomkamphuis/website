@@ -1,20 +1,19 @@
 ﻿<section id="container" ng-app="TomKamphuisApp">
     @Html.Partial("_HeaderPartial")
-    <section id="content" ng-controller="SlideController" ng-init="selectSlide('Slide1')">
-        @Html.Partial("_ProfilePartial")
+    <section id="content" ng-controller="SlideController" ng-init="selectSlide('profile')">
+        @*@Html.Partial("_ProfilePartial")*@
         <nav class="menu">
-            <ul class="tabs">
-                <li class="tmenu"><a href="#profile" class="tab-profile" onclick="sendAnalyticsData('Go to Profile')"><i>&#x43;</i>Profile</a></li>
-                <li class="tmenu"><a href="#resume" onclick="sendAnalyticsData('Go to Resume')"><i>&#x3a;</i>Resume</a></li>
-                <li class="tmenu"><a href="#portfolio" onclick="sendAnalyticsData('Go to Protfolio')"><i>&#x38;</i>Portfolio</a></li>
-                <li class="tmenu"><a href="#contact" onclick="sendAnalyticsData('Go to Contact')"><i>&#x21;</i>Contact</a></li>
+            <ul class="tabs" ng-repeat="slide in slides">
+                <li class="tmenu">
+                    <a href="#{{slide.pageTitle}}" class="{tab-profile: title == 'Profile'}" ng-click="selectSlide('{{slide.pageTitle}}')" onclick="sendAnalyticsData('Go to {{slide.pageTitle}}')"><i>{{slide.MenuPicto}}</i>{{slide.pageTitle}}</a>
+                </li>
             </ul>
             <a class="prev" id="menu-prev" href="#">&#xe073;</a>
             <a class="next" id="menu-next" href="#">&#xe076;</a>
         </nav>
-        @Html.Partial("_ResumePartial")
+        @*@Html.Partial("_ResumePartial")
         @Html.Partial("_PortfolioPartial")
-        @Html.Partial("_ContactPartial")
+        @Html.Partial("_ContactPartial")*@
     </section>
     @Html.Partial("_FooterPartial")
 </section>
