@@ -20,6 +20,10 @@ namespace TomKamphuisOnSpaAndAngular
                       "~/Static/JS/jquery-ui-map.js",
                       "~/Static/JS/jquery.carouFredSel.js"));
 
+            bundles.Add(new ScriptBundle("~/Bundles/Angular").Include(
+                      "~/Static/JS/Angular/angular.js",
+                      "~/Static/JS/Angular/angular-sanitize.js"));
+
             bundles.Add(new StyleBundle("~/Content/CSS").Include(
                       "~/Static/CSS/reset.css",
                       "~/Static/CSS/style.css",

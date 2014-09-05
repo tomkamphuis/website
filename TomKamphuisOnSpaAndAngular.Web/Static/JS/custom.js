@@ -15,7 +15,7 @@ jQuery(document).ready(function(){
 	  $logo.fadeIn('slow');
 	});
 	// Hide logo
-	$('.tab-profile').click(function() {
+	$('.tabProfile').click(function() {
 	  $logo.fadeOut('slow');
 	});	
 

@@ -1,4 +1,4 @@
-﻿angular.module('TomKamphuisApp', [])
+﻿angular.module('TomKamphuisApp', ['ngSanitize'])
     .controller('SlideController', function ($scope, $http) {
         $scope.title = "Loading...";
 

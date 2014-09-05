@@ -236,9 +236,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Static\JS\angular-mocks.js" />
-    <Content Include="Static\JS\angular.js" />
-    <Content Include="Static\JS\angular.min.js" />
+    <Content Include="Static\JS\Angular\angular-sanitize.js" />
+    <Content Include="Static\JS\Angular\angular-sanitize.min.js" />
+    <Content Include="Static\JS\Angular\angular-mocks.js" />
+    <Content Include="Static\JS\Angular\angular.js" />
+    <Content Include="Static\JS\Angular\angular.min.js" />
     <Content Include="Static\CSS\iemobile.css" />
     <Content Include="Static\CSS\prettyPhoto.css" />
     <Content Include="Static\CSS\reset.css" />
@@ -343,6 +345,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -361,7 +364,7 @@
     <Content Include="Views\Shared\_GoogleAnalyticsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Static\JS\angular.min.js.map" />
+    <Content Include="Static\JS\Angular\angular.min.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Portfolio\_ProfilePartial.html" />
@@ -380,6 +383,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_FooterPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Static\JS\Angular\angular-sanitize.min.js.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

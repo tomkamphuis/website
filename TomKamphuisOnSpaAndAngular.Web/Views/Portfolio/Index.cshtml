@@ -3,9 +3,9 @@
     <section id="content" ng-controller="SlideController" ng-init="selectSlide('profile')">
         @*@Html.Partial("_ProfilePartial")*@
         <nav class="menu">
-            <ul class="tabs" ng-repeat="slide in slides">
-                <li class="tmenu">
-                    <a href="#{{slide.pageTitle}}" class="{tab-profile: title == 'Profile'}" ng-click="selectSlide('{{slide.pageTitle}}')" onclick="sendAnalyticsData('Go to {{slide.pageTitle}}')"><i>{{slide.MenuPicto}}</i>{{slide.pageTitle}}</a>
+            <ul class="tabs">
+                <li class="tmenu" ng-repeat="slide in slides">
+                    <a href="#{{slide.pageTitle}}" ng-class="{tabProfile: $index==0}" ng-click="selectSlide('{{slide.pageTitle}}')"><i ng-bind-html="slide.menuPicto"></i>{{slide.pageTitle}}</a>
                 </li>
             </ul>
             <a class="prev" id="menu-prev" href="#">&#xe073;</a>
