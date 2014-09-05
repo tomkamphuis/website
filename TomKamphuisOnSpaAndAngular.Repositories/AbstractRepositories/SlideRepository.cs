@@ -14,6 +14,7 @@ namespace TomKamphuisOnSpaAndAngular.Repositories.AbstractRepositories
         {
             if(_model == null)
             {
+                _model = new SlideModel();
                 _model.Slides = new List<Slide>();
 
                 _model.Slides.Add(new Slide
