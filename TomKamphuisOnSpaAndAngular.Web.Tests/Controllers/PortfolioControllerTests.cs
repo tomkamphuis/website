@@ -12,7 +12,7 @@ using TomKamphuisOnSpaAndAngular.Repositories.Interfaces;
 namespace TomKamphuisOnSpaAndAngular.Web.Tests.Controllers
 {
     [TestClass]
-    public class PortfolioControllerTest
+    public class PortfolioControllerTests
     {
         [TestMethod]
         public void Index_Action_Should_Return_ViewResult()
