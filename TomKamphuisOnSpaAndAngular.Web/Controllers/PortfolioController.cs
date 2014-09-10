@@ -13,22 +13,22 @@ namespace TomKamphuisOnSpaAndAngular.Web.Controllers
 
         public ActionResult Profile()
         {
-            return RedirectToAction(_defaultIndexAction);
+            return View(_defaultIndexAction);
         }
 
         public ActionResult Resume()
         {
-            return RedirectToAction(_defaultIndexAction);
+            return View(_defaultIndexAction);
         }
 
         public ActionResult Portfolio()
         {
-            return RedirectToAction(_defaultIndexAction);
+            return View(_defaultIndexAction);
         }
 
         public ActionResult Contact()
         {
-            return RedirectToAction(_defaultIndexAction);
+            return View(_defaultIndexAction);
         }
     }
 }
