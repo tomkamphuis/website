@@ -1,27 +1,34 @@
 ﻿using System.Web.Mvc;
-using TomKamphuisOnSpaAndAngular.Models.Slides;
-using TomKamphuisOnSpaAndAngular.Repositories.Interfaces;
 
 namespace TomKamphuisOnSpaAndAngular.Web.Controllers
 {
     public class PortfolioController : Controller
     {
-        private readonly ISlideRepository _repo;
+        private readonly string _defaultIndexAction = "Index";
 
-        public PortfolioController(ISlideRepository repo)
+        public ActionResult Index()
         {
-            _repo = repo;
+            return View();
         }
 
-        public ActionResult Index(string slide)
+        public ActionResult Profile()
         {
-            // Haal de hashtag uit de url voor directe repo actie...
-            if(!string.IsNullOrEmpty(slide))
-            {
-                SlideModel model = new SlideModel();
-            }
+            return RedirectToAction(_defaultIndexAction);
+        }
 
-            return View();
+        public ActionResult Resume()
+        {
+            return RedirectToAction(_defaultIndexAction);
+        }
+
+        public ActionResult Portfolio()
+        {
+            return RedirectToAction(_defaultIndexAction);
+        }
+
+        public ActionResult Contact()
+        {
+            return RedirectToAction(_defaultIndexAction);
         }
     }
 }

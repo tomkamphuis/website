@@ -15,18 +15,57 @@ namespace TomKamphuisOnSpaAndAngular.Web.Tests.Controllers
     public class PortfolioControllerTest
     {
         [TestMethod]
-        public void Index()
+        public void Index_Action_Should_Return_ViewResult()
         {
-            ISlideRepository repo = new SlideRepository();
+            PortfolioController controller = new PortfolioController();
 
-            // Arrange
-            PortfolioController controller = new PortfolioController(repo);
+            ViewResult result = controller.Index() as ViewResult;
 
-            // Act
-            ViewResult result = controller.Index(string.Empty) as ViewResult;
-
-            // Assert
             Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void Profile_Action_Should_Redirect_To_Index_Action()
+        {
+            PortfolioController controller = new PortfolioController();
+
+            RedirectToRouteResult result = controller.Profile() as RedirectToRouteResult;
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual("Index", result.RouteValues["action"] as String);
+        }
+
+        [TestMethod]
+        public void Resume_Action_Should_Redirect_To_Index_Action()
+        {
+            PortfolioController controller = new PortfolioController();
+
+            RedirectToRouteResult result = controller.Resume() as RedirectToRouteResult;
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual("Index", result.RouteValues["action"] as String);
+        }
+        [TestMethod]
+
+        public void Portfolio_Action_Should_Redirect_To_Index_Action()
+        {
+            PortfolioController controller = new PortfolioController();
+
+            RedirectToRouteResult result = controller.Portfolio() as RedirectToRouteResult;
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual("Index", result.RouteValues["action"] as String);
+        }
+
+        [TestMethod]
+        public void Contact_Action_Should_Redirect_To_Index_Action()
+        {
+            PortfolioController controller = new PortfolioController();
+
+            RedirectToRouteResult result = controller.Contact() as RedirectToRouteResult;
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual("Index", result.RouteValues["action"] as String);
         }
     }
 }
