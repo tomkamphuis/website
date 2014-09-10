@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TomKamphuisOnSpaAndAngular</RootNamespace>
-    <AssemblyName>TomKamphuisOnSpaAndAngular</AssemblyName>
+    <RootNamespace>TomKamphuisOnSpaAndAngular.Web</RootNamespace>
+    <AssemblyName>TomKamphuisOnSpaAndAngular.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -237,6 +237,8 @@
   <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Static\JS\Angular\angular-route.js" />
+    <Content Include="Static\JS\Angular\angular-route.min.js" />
     <Content Include="Static\JS\Angular\angular-sanitize.js" />
     <Content Include="Static\JS\Angular\angular-sanitize.min.js" />
     <Content Include="Static\JS\Angular\angular-mocks.js" />
@@ -292,6 +294,8 @@
     <Content Include="Static\Images\prettyPhoto\light_square\sprite.png" />
     <Content Include="Static\Images\tab-hover%402x.png" />
     <Content Include="Static\Images\tab-hover.png" />
+    <Content Include="Static\JS\App\Controllers.js" />
+    <Content Include="Static\JS\App\ResumeController.js" />
     <Content Include="Static\JS\App\SlideController.js" />
     <Content Include="Static\JS\custom.js" />
     <Content Include="Static\JS\jquery-ui-map.js" />
@@ -367,19 +371,20 @@
     <Content Include="Static\JS\Angular\angular.min.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Portfolio\_ProfilePartial.html" />
+    <Content Include="Static\JS\Angular\angular-route.min.js.map" />
+    <Content Include="Static\HTML\App\_ProfilePartial.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_HeaderPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Portfolio\_ResumePartial.html" />
+    <Content Include="Static\HTML\App\_ResumePartial.html" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Portfolio\_PortfolioPartial.html" />
+    <Content Include="Static\HTML\App\_PortfolioPartial.html" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Portfolio\_ContactPartial.html" />
+    <Content Include="Static\HTML\App\_ContactPartial.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_FooterPartial.cshtml" />

@@ -22,6 +22,7 @@ namespace TomKamphuisOnSpaAndAngular
 
             bundles.Add(new ScriptBundle("~/Bundles/Angular").Include(
                       "~/Static/JS/Angular/angular.js",
+                      "~/Static/JS/Angular/angular-route.js",
                       "~/Static/JS/Angular/angular-sanitize.js"));
 
             bundles.Add(new StyleBundle("~/Content/CSS").Include(

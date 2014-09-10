@@ -1,4 +1,13 @@
-﻿<section id="contact">
+﻿<nav class="menu">
+    <ul class="tabs">
+        <li class="tmenu" ng-repeat="slide in slides">
+            <a href="/{{slide.pageTitle}}" ng-class="{tabProfile: $index==0, active: slide.pageTitle==title}"><i ng-bind-html="slide.menuPicto"></i>{{slide.pageTitle}}</a>
+        </li>
+    </ul>
+    <a class="prev" id="menu-prev" href="#">&#xe073;</a>
+    <a class="next" id="menu-next" href="#">&#xe076;</a>
+</nav>
+<section id="contact">
     <div id="map"></div>
     <div class="contact-info">
         <h3 class="main-heading"><span>Contact info</span></h3>

@@ -1,22 +1,8 @@
-﻿<section id="container" ng-app="TomKamphuisApp">
+﻿<section id="container" ng-app="tkServices">
     @Html.Partial("_HeaderPartial")
-    <section id="content" ng-controller="SlideController" ng-init="selectSlide('profile')">
-        @*@Html.Partial("_ProfilePartial")*@
-        <nav class="menu">
-            <ul class="tabs">
-                <li class="tmenu" ng-repeat="slide in slides">
-                    <a href="#{{slide.pageTitle}}" ng-class="{tabProfile: $index==0}" ng-click="selectSlide('{{slide.pageTitle}}')"><i ng-bind-html="slide.menuPicto"></i>{{slide.pageTitle}}</a>
-                </li>
-            </ul>
-            <a class="prev" id="menu-prev" href="#">&#xe073;</a>
-            <a class="next" id="menu-next" href="#">&#xe076;</a>
-        </nav>
-        @*@Html.Partial("_ResumePartial")
-        @Html.Partial("_PortfolioPartial")
-        @Html.Partial("_ContactPartial")*@
-    </section>
+    <section id="content" ng-view ng-init="selectSlide('profile')"></section>
     @Html.Partial("_FooterPartial")
 </section>
 @section Scripts {
-    @Scripts.Render("~/Static/JS/App/SlideController.js")
+    @Scripts.Render("~/Static/JS/App/Controllers.js")
 }

@@ -1,4 +1,4 @@
-﻿<div id="profile">
+﻿<section id="profile">
     <div class="about">
         <div class="photo-inner">
             <ul>
@@ -18,4 +18,13 @@
         <li><label>Phone</label><span>On request</span></li>
         <li><label>Website</label><span class="word-wrap"><a href="#">www.tomkamphuis.nl</a></span></li>
     </ul>
-</div>
+</section>
+<nav class="menu">
+    <ul class="tabs">
+        <li class="tmenu" ng-repeat="slide in slides">
+            <a href="/{{slide.pageTitle}}" ng-class="{tabProfile: $index==0, active: slide.pageTitle==title}"><i ng-bind-html="slide.menuPicto"></i>{{slide.pageTitle}}</a>
+        </li>
+    </ul>
+    <a class="prev" id="menu-prev" href="#">&#xe073;</a>
+    <a class="next" id="menu-next" href="#">&#xe076;</a>
+</nav>
